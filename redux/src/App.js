@@ -1,4 +1,5 @@
 import "./App.css";
+import React, {useState} from 'react'
 
 const data = [
   { title: "node", value: 0 },
@@ -11,7 +12,7 @@ function App() {
       <header className="App-header">
         {data.map((item) => (
           <>
-            <p>{item.title}, {item.value}</p>
+            <p key={item.value}>{item.title}, {item.value}</p>
           </>
         ))}
       </header>
