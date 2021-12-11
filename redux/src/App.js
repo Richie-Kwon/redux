@@ -7,12 +7,15 @@ import React, { useState } from "react";
 // ];
 
 function App() {
- 
+ const handleClick = () =>{
+   console.log('button is clicked')
+ }
 
   return (
     <div className="App">
-      <button onClick
+      <button onClick={handleClick}>Button</button>
     </div>
+
   );
 }
 
