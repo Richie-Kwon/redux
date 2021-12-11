@@ -7,24 +7,19 @@ import React, { useState } from "react";
 // ];
 
 function App() {
-  
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log("button is clicked");
+  };
+  const iter = [0, 1, 2];
+
   return (
     <div className="App">
-      <header>
-        <button onClick={() => setCount(count + 1)}>{count}</button>
-      </header>
+      <button onClick={handleClick}>Button</button>
 
-      <div className="todolist">
-
-        <Todo></Todo>
-      </div>
-      {/* <header className="App-header">
-        {data.map((item) => (
-          <>
-            <p key={item.value}>{item.title}, {item.value}</p>
-          </>
-        ))}
-      </header> */}
+      <div>
+        {iter.map(item => <h1 key = {item} >{item}</h1>)}
+      </div> 
     </div>
   );
 }
